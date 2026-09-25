@@ -1,12 +1,14 @@
 const lazyLoading = () => {
 
-    const lazyImgs = document.querySelectorAll('.lazy');
+    const lazyImgs = document.querySelectorAll<HTMLElement>('.lazy');
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
-                let img = entry.target;
-                img.src = img.dataset.src;
+                let img = entry.target as HTMLImageElement;
+                if (img.dataset.src) {
+                    img.src = img.dataset.src
+                };
                 img.classList.remove('loading');
                 img.classList.add('loaded');
                 observer.unobserve(img);
