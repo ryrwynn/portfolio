@@ -1,3 +1,7 @@
+#header__container{
+    max-width: 100%;
+}
+
 .header.container{
     position: fixed;
 }
@@ -8,7 +12,6 @@
     align-items: center;
     padding-bottom: 1rem;
     padding-top: 1rem;
-    position: sticky;
     z-index: 200;
     top: 0;
     background-color: var(--clr-dark);
