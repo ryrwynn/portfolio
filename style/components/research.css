@@ -1,0 +1,226 @@
+.research {
+    text-align: center;
+}
+
+.research__title {
+    font-size: var(--size-2xl);
+    color: var(--clr-light);
+    margin-bottom: 2rem;
+}
+
+.research__content-title {
+    font-size: var(--size-base);
+    margin-bottom: 1rem;
+}
+
+.research__container:not(:last-child) {
+    margin-bottom: 5rem;
+}
+
+.research__content-description1 {
+    max-width: 60ch;
+    font-size: var(--size-sm);
+    color: var(--clr-slate600);
+    margin: 1rem 0;
+}
+
+.research__content-description2 {
+    max-width: 60ch;
+    font-size: var(--size-sm);
+    color: var(--clr-slate400);
+    margin: 1rem 0;
+}
+
+.research__content-btn {
+    font-size: var(--size-sm);
+}
+
+.research__content-subtitle {
+    display: none;
+}
+
+.research__container {
+    padding: 0 1rem;
+}
+
+.research__iframe-wrapper {
+   width: 100%;
+   height: 100%;
+}
+
+.research__iframe {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.research__content {
+    margin: 0 0 5rem 0;
+}
+
+
+/* xs */
+@media (min-width: 475px) {
+
+    .research__title {
+        font-size: var(--size-3xl);
+    }
+
+    .research__content-title {
+        font-size: var(--size-lg);
+        margin-bottom: 1.5rem;
+    }
+
+    .research__content-description1 {
+        font-size: var(--size-base);
+        margin: 1.5rem 0;
+    }
+    
+    .research__content-description2 {
+        font-size: var(--size-base);
+        margin: 1.5rem 0;
+    }
+    
+    .research__content-btn {
+        font-size: var(--size-base);
+    }
+}
+
+/* sm */
+@media (min-width: 640px) {
+
+    .research__iframe{
+        padding: 0 2rem;
+    }
+    
+    .research__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        'iframe1 content1'
+        'content2 iframe2';
+        place-items: center;
+        row-gap: 5rem;
+    }
+
+    .research__iframe1{
+        grid-area: iframe1;
+    }
+
+    .research__iframe2{
+        grid-area: iframe2;
+    }
+
+    .research__content1{
+        grid-area: content1;
+    }
+
+    .research__content2{
+        grid-area: content2;
+    }
+
+
+    .research__content-title {
+        display: none;
+    }
+
+    .research__content-description1 {
+        font-size: var(--size-xs);
+        margin: 1em 0;
+    }
+    
+    .research__content-description2 {
+        font-size: var(--size-xs);
+        margin: 1em 0;
+    }
+    
+    .research__content-btn {
+        font-size: var(--size-xs);
+    }
+
+    .research__container:not(:last-child){
+        margin: 0rem;
+    }
+
+    .research__content-subtitle {
+        display: block;
+        font-size: var(--size-base);
+    }
+}
+
+/* md */
+@media (min-width: 768px) {
+    
+    .research__content-description1 {
+        font-size: var(--size-sm);
+    }
+    
+    .research__content-description2 {
+        font-size: var(--size-sm);
+    }
+    
+    .research__content-btn {
+        font-size: var(--size-sm);
+    }
+
+    .research__content-subtitle {
+        font-size: var(--size-lg);
+    }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+
+    .research__title {
+        font-size: var(--size-4xl);
+    }
+
+    .research__content-description1 {
+        font-size: var(--size-base);
+    }
+    
+    .research__content-description2 {
+        font-size: var(--size-base);
+    }
+    
+    .research__content-btn {
+        font-size: var(--size-base);
+    }
+
+    .research__content-subtitle {
+        font-size: var(--size-xl);
+    }
+
+    .research__img-wrapper {
+        width: 80%;
+        height: 100%;
+    }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+    
+    .research__iframe{
+        padding: 0 5rem;
+    }
+    
+    .research__title {
+        font-size: var(--size-5xl);
+    }
+
+    .research__content-description1 {
+        font-size: var(--size-lg);
+    }
+    
+    .research__content-description2 {
+        font-size: var(--size-lg);
+    }
+    
+    .research__content-btn {
+        font-size: var(--size-lg);
+    }
+
+    .research__content-subtitle {
+        font-size: var(--size-2xl);
+    }
+}
