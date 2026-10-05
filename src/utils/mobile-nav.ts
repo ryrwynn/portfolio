@@ -9,7 +9,11 @@ const mobileNav = () => {
     if (!headerBtn || !mobileNav) return;
 
     headerBtn.addEventListener('click', () => {
-        if(!mobileNavOpen) { // if false
+        if (!mobileNavOpen) { // if false
+            window.scrollTo({ 
+                top: 0,
+                behavior: 'instant'
+            })
             mobileNav.style.display = 'flex';
             document.body.style.overflowY = 'hidden';
         }
@@ -21,8 +25,8 @@ const mobileNav = () => {
 
     });
 
-    for(let i = 0; i < mobileLinks.length; i++){
-        mobileLinks[i].addEventListener('click', ()=> {
+    for (let i = 0; i < mobileLinks.length; i++) {
+        mobileLinks[i].addEventListener('click', () => {
             document.body.style.overflowY = 'auto';
             mobileNav.style.display = 'none';
             mobileNavOpen = !mobileNavOpen;
